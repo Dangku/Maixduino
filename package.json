@@ -1,6 +1,6 @@
 {
-    "name": "framework-bananapi",
+    "name": "framework-rbxyduino",
     "description": "Arduino Wiring-based Framework (K210 Core)",
-    "version": "0.3.11",
+    "version": "0.3.12",
     "url": "https://github.com/Dangku/Maixduino"
 }
