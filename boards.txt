@@ -331,3 +331,48 @@ ioxgd4.upload.tool=kflash
 ## Limit is the 16MB Flash. Assume half is used for something else.
 ioxgd4.upload.maximum_size=8388608
 ioxgd4.build.ldscript={runtime.platform.path}/cores/arduino/kendryte-standalone-sdk/lds/kendryte.ld
+
+##################################################
+############# Bananapi Rbxy Board ###############
+
+rbxy.name=Bananapi Rbxy Board
+
+## Toolchain
+rbxy.menu.toolsloc.default=Default
+rbxy.menu.toolsloc.default.compiler.path={runtime.tools.riscv64-unknown-elf-gcc.path}/bin/
+
+## CPU Clock
+rbxy.menu.clksrc.400=400MHz CPU Clock Frequency
+rbxy.menu.clksrc.500=500MHz CPU Clock Frequency
+rbxy.menu.clksrc.600=600MHz CPU Clock Frequency
+rbxy.menu.clksrc.400.build.f_cpu=400000000L
+rbxy.menu.clksrc.500.build.f_cpu=500000000L
+rbxy.menu.clksrc.600.build.f_cpu=600000000L
+
+## Burn baud rate
+rbxy.menu.burn_baudrate.1500000=1.5 Mbps
+rbxy.menu.burn_baudrate.1000000=1 Mbps
+rbxy.menu.burn_baudrate.1500000.build.burn_baudrate=1500000
+rbxy.menu.burn_baudrate.1000000.build.burn_baudrate=1000000
+
+## Burn tool firmware
+rbxy.menu.burn_tool_firmware.rbxy=Default
+rbxy.menu.burn_tool_firmware.rbxy.build.burn_tool_firmware=bananapi
+
+## Point to the file for ./variants/<variant>/pins_arduino.h
+rbxy.build.variant=bananapi_rbxy
+
+## "The 'core' file directory for this board, in ./cores
+rbxy.build.core=arduino
+
+## This sets a define for use in the compiled code.
+rbxy.build.board=BOARD_BANANAPI_RBXY_DUINO
+rbxy.build.sdata.size=512
+
+## This selects the tool from "programmers.txt"
+rbxy.program.tool=kflash
+rbxy.upload.tool=kflash
+
+## Limit is the 16MB Flash. Assume half is used for something else.
+rbxy.upload.maximum_size=8388608
+rbxy.build.ldscript="{runtime.platform.path}/cores/arduino/kendryte-standalone-sdk/lds/kendryte.ld"
